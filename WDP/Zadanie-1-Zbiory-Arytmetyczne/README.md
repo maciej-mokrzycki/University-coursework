@@ -21,8 +21,6 @@ The `@opcje` argument loads compiler options from the supplied file. The `-std=c
 
 ### Zbiory arytmetyczne
 
-**Uwaga:** Rozwiązanie każdego zadania zaliczeniowego trzeba przedstawić laborantowi w ciągu 2 tygodni od zakończenia terminu zgłoszeń. W wyjątkowych przypadkach, np. choroby, jest możliwe wydłużenie tego terminu.
-
 W tym zadaniu powinieneś zaimplementować w języku C podstawowe operacje teoriomnogościowe na zbiorach liczb całkowitych. Zbiory w zadaniu konstruujemy za pomocą specyficznych ciągów arytmetycznych.
 
 Zbiory będziemy reprezentować za pomocą typu `struct zbior_ary`.
