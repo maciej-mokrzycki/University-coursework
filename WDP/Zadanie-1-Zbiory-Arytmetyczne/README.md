@@ -2,7 +2,7 @@
 
 Set representation, union, intersection, and difference.
 
-This assignment implements the API in [`zbior_ary.h`](https://github.com/Lecorbio/university-courses/blob/main/wdp/Zadanie-1-Zbiory-arytmetyczne/zbior_ary.h). The supplied [`ocen.c`](https://github.com/Lecorbio/university-courses/blob/main/wdp/Zadanie-1-Zbiory-arytmetyczne/ocen.c) runs example operations and checks their results with assertions.
+This assignment implements the API in [`zbior_ary.h`](./zbior_ary.h). The supplied [`ocen.c`](./ocen.c) runs example operations and checks their results with assertions.
 
 ## Build and run
 
@@ -54,9 +54,9 @@ Ponadto należy zaimplementować następujące funkcje:
 - `unsigned moc(zbior_ary A);`  
   Funkcja daje w wyniku liczbę elementów zbioru `A`. Możesz założyć, że wynik funkcji zawsze zmieści się w typie.
 
-Dla danego zbioru $A$ oraz liczby $q$, przez $\operatorname{Ary}_q(A)$ oznaczamy minimalną liczbę parami rozłącznych ciągów arytmetycznych o różnicy $q$, których sumą jest zbiór $A$.
+Dla danego zbioru A oraz liczby q, przez `Ary_q(A)` oznaczamy minimalną liczbę parami rozłącznych ciągów arytmetycznych o różnicy q, których sumą jest zbiór A.
 
-Na przykład $\operatorname{Ary}_5(\{1,2,4,7,9,12,19\}) = 4$, ponieważ zbiór ten jest sumą czterech ciągów arytmetycznych o różnicy `5`:
+Na przykład `Ary_5({1, 2, 4, 7, 9, 12, 19}) = 4`, ponieważ zbiór ten jest sumą czterech ciągów arytmetycznych o różnicy 5:
 
 - `{1}`,
 - `{2, 7, 12}`,
@@ -66,24 +66,24 @@ Na przykład $\operatorname{Ary}_5(\{1,2,4,7,9,12,19\}) = 4$, ponieważ zbiór t
 Powinieneś zaimplementować jeszcze jedną funkcję:
 
 - `unsigned ary(zbior_ary A);`  
-  Funkcja dla danego zbioru $A$ daje w wyniku liczbę $\operatorname{Ary}_q(A)$, dla zadanego w teście parametru $q$.
+  Funkcja dla danego zbioru A daje w wyniku liczbę `Ary_q(A)`, dla zadanego w teście parametru q.
 
 W Twojej implementacji:
 
-- Złożoność czasowa funkcji `suma(A, B)`, `iloczyn(A, B)` i `roznica(A, B)` powinna być proporcjonalna do $\operatorname{Ary}_q(A) + \operatorname{Ary}_q(B)$.
-- Złożoność funkcji `nalezy(A, x)` powinna być $O(\log(\operatorname{Ary}_q(A)))$.
-- Złożoność funkcji `moc(A)` i `ary(A)` powinna być w najgorszym razie $O(\operatorname{Ary}_q(A))$.
-- Do przechowywania zbioru $A$ należy użyć $O(\operatorname{Ary}_q(A))$ pamięci.
+- Złożoność czasowa funkcji `suma(A, B)`, `iloczyn(A, B)` i `roznica(A, B)` powinna być proporcjonalna do `Ary_q(A) + Ary_q(B)`.
+- Złożoność funkcji `nalezy(A, x)` powinna być `O(log(Ary_q(A)))`.
+- Złożoność funkcji `moc(A)` i `ary(A)` powinna być w najgorszym razie `O(Ary_q(A))`.
+- Do przechowywania zbioru A należy użyć `O(Ary_q(A))` pamięci.
 
 Rozwiązania nieoptymalne czasowo lub pamięciowo, ale poprawne, mogą liczyć na punkty częściowe.
 
 Argumentami powyższych funkcji będą liczby typu `int`. Parametr `q` będzie liczbą dodatnią i we wszystkich wywołaniach funkcji `ciag_arytmetyczny` w danym teście będzie taki sam. Ponadto funkcja `ciag_arytmetyczny` zostanie wywołana jako pierwsza, dzięki czemu Twoja biblioteka będzie mogła od razu poznać parametr `q`.
 
-Wyżej opisane funkcje znajdują się w pliku [`zbior_ary.h`](https://github.com/Lecorbio/university-courses/blob/main/wdp/Zadanie-1-Zbiory-arytmetyczne/zbior_ary.h). Twoim zadaniem jest zaproponować reprezentację zbiorów jako `struct zbior_ary`, która umożliwia efektywne wykonywanie operacji zgodnie z powyższymi wymaganiami.
+Wyżej opisane funkcje znajdują się w pliku [`zbior_ary.h`](./zbior_ary.h). Twoim zadaniem jest zaproponować reprezentację zbiorów jako `struct zbior_ary`, która umożliwia efektywne wykonywanie operacji zgodnie z powyższymi wymaganiami.
 
 Twoje rozwiązanie ma być umieszczone w pliku o nazwie `zbior_ary.c` i pasować do specyfikacji interfejsu `zbior_ary.h`. Należy również załączyć plik `zbior_ary.h` uzupełniony o definicję typu `struct zbior_ary`.
 
-Kilka przykładowych operacji na zbiorach możesz znaleźć w pliku [`ocen.c`](https://github.com/Lecorbio/university-courses/blob/main/wdp/Zadanie-1-Zbiory-arytmetyczne/ocen.c).
+Kilka przykładowych operacji na zbiorach możesz znaleźć w pliku [`ocen.c`](./ocen.c).
 
 Komenda kompilacji podana w treści zadania:
 
