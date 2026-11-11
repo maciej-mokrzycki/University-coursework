@@ -95,7 +95,3 @@ Opcja `-lm` dołącza bibliotekę matematyczną. Powinna znajdować się na koń
 
 W tym zadaniu nie musisz przejmować się końcowym zwalnianiem pamięci.
 
-## Authors
-
-- Implementation — Maciej Mokrzycki.
-- Code review — Oskar Skoczylas.
